@@ -60,7 +60,7 @@
   --shadow-2xl: 0 25px 50px -12px var(--shadow);
   --shadow-mockup: -12px 16px 48px var(--shadow-strong);
 
-  --line-width: 1px;
+  --line-width: 0;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -112,8 +112,8 @@
 
 :root {
   /* Accent colors */
-  --brand: oklch(66.5% 0.1804 47.04);
-  --brand-foreground: oklch(75.77% 0.159 55.91);
+  --brand: oklch(66.5% 0.1804 280);
+  --brand-foreground: oklch(75.77% 0.159 285);
 
   /* Customized shadcn/ui colors */
   --background: oklch(97.65% 0.001 17.18);

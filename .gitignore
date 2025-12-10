@@ -4,14 +4,34 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
+
+# Database
+*.db
+
+# clerk
+/.clerk/
 
 # testing
-/coverage
+/coverage/
+
+# storybook
+storybook-static
+*storybook.log
+
+# playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
 
 # next.js
-/.next/
-/out/
+/.next
+/out
+
+# typescript
+*.tsbuildinfo
+
+# cache
+.swc/
 
 # production
 /build
@@ -19,22 +39,37 @@
 # misc
 .DS_Store
 *.pem
+Thumbs.db
 
 # debug
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 # local env files
-.env*.local
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
+.env
 next-env.d.ts
 
-# pro
-/app/pro/
-/components/pro/
+# local folder
+local
+
+# vercel
+.vercel/
+
+dist/
+**/*.log
+selenium-debug.log
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.local
+
+package-lock.json
+yarn.lock
+.yarn/

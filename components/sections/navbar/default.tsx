@@ -5,16 +5,16 @@ import { ReactNode } from "react";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
-import LaunchUI from "../../logos/launch-ui";
-import { Button, buttonVariants } from "../../ui/button";
+import LaunchUI from "@/components/logos/launch-ui";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Navbar as NavbarComponent,
   NavbarLeft,
   NavbarRight,
-} from "../../ui/navbar";
-import Navigation from "../../ui/navigation";
-import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
-
+} from "@/components/ui/navbar";
+import Navigation from "@/components/ui/navigation";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ThemeDropdownMenu } from "@/components/layout/theme-dropdown-menu";
 interface NavbarLink {
   text: string;
   href: string;
@@ -42,7 +42,7 @@ interface NavbarProps {
 
 export default function Navbar({
   logo = <LaunchUI />,
-  name = "Launch UI",
+  name = "AIShortV",
   homeUrl = siteConfig.url,
   mobileLinks = [
     { text: "Getting Started", href: siteConfig.url },
@@ -78,6 +78,7 @@ export default function Navbar({
             {showNavigation && (customNavigation || <Navigation />)}
           </NavbarLeft>
           <NavbarRight>
+            <ThemeDropdownMenu />
             {actions.map((action, index) =>
               action.isButton ? (
                 <Button
