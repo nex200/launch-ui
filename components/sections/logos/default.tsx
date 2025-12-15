@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 import { siteConfig } from "@/config/site";
@@ -19,10 +20,9 @@ interface LogosProps {
 }
 
 export default function Logos({
-  title = "Built with industry-standard tools and best practices",
+  title,
   badge = (
     <Badge variant="outline" className="border-brand/30 text-brand">
-      Last updated: {siteConfig.stats.updated}
     </Badge>
   ),
   logos = [
@@ -45,12 +45,15 @@ export default function Logos({
   ],
   className,
 }: LogosProps) {
+  const t = useTranslations("logos");
+  const defaultTitle = title ?? t("title");
+
   return (
     <Section className={className}>
       <div className="max-w-container mx-auto flex flex-col items-center gap-8 text-center">
         <div className="flex flex-col items-center gap-6">
           {badge !== false && badge}
-          <h2 className="text-md font-semibold sm:text-2xl">{title}</h2>
+          <h2 className="text-md font-semibold sm:text-2xl">{defaultTitle}</h2>
         </div>
         {logos !== false && logos.length > 0 && (
           <div className="flex flex-wrap items-center justify-center gap-8">

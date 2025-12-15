@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 import { siteConfig } from "@/config/site";
@@ -34,40 +35,50 @@ interface FooterProps {
 
 export default function FooterSection({
   logo = <LaunchUI />,
-  name = "Launch UI",
-  columns = [
-    {
-      title: "Product",
-      links: [
-        { text: "Changelog", href: siteConfig.url },
-        { text: "Documentation", href: siteConfig.url },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { text: "About", href: siteConfig.url },
-        { text: "Careers", href: siteConfig.url },
-        { text: "Blog", href: siteConfig.url },
-      ],
-    },
-    {
-      title: "Contact",
-      links: [
-        { text: "Discord", href: siteConfig.url },
-        { text: "Twitter", href: siteConfig.url },
-        { text: "Github", href: siteConfig.links.github },
-      ],
-    },
-  ],
-  copyright = "© 2025 Mikołaj Dobrucki. All rights reserved",
-  policies = [
-    { text: "Privacy Policy", href: siteConfig.url },
-    { text: "Terms of Service", href: siteConfig.url },
-  ],
+  name,
+  columns,
+  copyright,
+  policies,
   showModeToggle = true,
   className,
 }: FooterProps) {
+  const t = useTranslations("footer");
+
+  const defaultName = name ?? t("name");
+  const defaultColumns =
+    columns ?? [
+      {
+        title: t("columns.product.title"),
+        links: [
+          { text: t("columns.product.links.changelog"), href: siteConfig.url },
+          {
+            text: t("columns.product.links.documentation"),
+            href: siteConfig.url,
+          },
+        ],
+      },
+      {
+        title: t("columns.company.title"),
+        links: [
+          { text: t("columns.company.links.about"), href: siteConfig.url },
+          { text: t("columns.company.links.careers"), href: siteConfig.url },
+          { text: t("columns.company.links.blog"), href: siteConfig.url },
+        ],
+      },
+      {
+        title: t("columns.contact.title"),
+        links: [
+          { text: t("columns.contact.links.discord"), href: siteConfig.url },
+          { text: t("columns.contact.links.twitter"), href: siteConfig.url },
+        ],
+      },
+    ];
+  const defaultCopyright = copyright ?? t("copyright");
+  const defaultPolicies =
+    policies ?? [
+      { text: t("policies.privacy"), href: siteConfig.url },
+      { text: t("policies.terms"), href: siteConfig.url },
+    ];
   return (
     <footer className={cn("bg-background w-full px-4", className)}>
       <div className="max-w-container mx-auto">
@@ -76,10 +87,10 @@ export default function FooterSection({
             <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
               <div className="flex items-center gap-2">
                 {logo}
-                <h3 className="text-xl font-bold">{name}</h3>
+                <h3 className="text-xl font-bold">{defaultName}</h3>
               </div>
             </FooterColumn>
-            {columns.map((column, index) => (
+            {defaultColumns.map((column, index) => (
               <FooterColumn key={index}>
                 <h3 className="text-md pt-1 font-semibold">{column.title}</h3>
                 {column.links.map((link, linkIndex) => (
@@ -95,9 +106,9 @@ export default function FooterSection({
             ))}
           </FooterContent>
           <FooterBottom>
-            <div>{copyright}</div>
+            <div>{defaultCopyright}</div>
             <div className="flex items-center gap-4">
-              {policies.map((policy, index) => (
+              {defaultPolicies.map((policy, index) => (
                 <a key={index} href={policy.href}>
                   {policy.text}
                 </a>

@@ -1,0 +1,247 @@
+{
+  "navbar": {
+    "name": "AIShortV",
+    "links": {
+      "gettingStarted": "快速开始",
+      "components": "组件",
+      "documentation": "文档"
+    },
+    "actions": {
+      "signIn": "登录",
+      "getStarted": "开始使用"
+    },
+    "toggleMenu": "切换导航菜单"
+  },
+  "hero": {
+    "title": "为您的伟大创意设计应有的外观",
+    "description": "使用 React、Shadcn/ui 和 Tailwind 构建的专业设计块和模板，帮助您的产品脱颖而出。",
+    "badge": {
+      "text": "Launch UI 新版本已发布！",
+      "link": "开始使用"
+    },
+    "buttons": {
+      "getStarted": "开始使用"
+    }
+  },
+  "logos": {
+    "title": "使用行业标准工具和最佳实践构建"
+  },
+  "items": {
+    "title": "您需要的一切。没有多余的。",
+    "items": {
+      "accessibility": {
+        "title": "无障碍优先",
+        "description": "完全符合 WCAG 2.0 标准，采用最佳 a11y 实践"
+      },
+      "responsive": {
+        "title": "响应式设计",
+        "description": "在任何设备和屏幕尺寸上都能完美显示和工作"
+      },
+      "themes": {
+        "title": "浅色和深色模式",
+        "description": "在配色方案之间无缝切换，包含 6 种主题"
+      },
+      "customizable": {
+        "title": "易于定制",
+        "description": "灵活的选项以匹配您的产品或品牌"
+      },
+      "performance": {
+        "title": "顶级性能",
+        "description": "专为闪电般的加载时间和流畅的交互而设计"
+      },
+      "production": {
+        "title": "生产就绪",
+        "description": "经过全面测试，随时可以发布"
+      },
+      "localization": {
+        "title": "支持本地化",
+        "description": "轻松实现多语言和地区支持"
+      },
+      "cms": {
+        "title": "CMS 友好",
+        "description": "构建为可与任何无头内容管理系统配合使用"
+      }
+    }
+  },
+  "stats": {
+    "items": []
+  },
+  "pricing": {
+    "title": "今天就开始构建您梦想中的落地页。",
+    "description": "获得所有组件的终身访问权限。无重复费用。简单透明的定价。",
+    "plans": {
+      "free": {
+        "name": "免费",
+        "description": "适合每个想要为自己的伟大创意创建网站的人",
+        "priceNote": "永久免费和开源。",
+        "cta": "免费开始",
+        "features": {
+          "template": "1 个网站模板",
+          "blocks": "9 个块和部分",
+          "animations": "4 个自定义动画"
+        }
+      },
+      "pro": {
+        "name": "专业版",
+        "description": "适合早期创始人、独立创业者和独立开发者",
+        "priceNote": "终身访问。免费更新。无重复费用。",
+        "cta": "获取全部访问权限",
+        "features": {
+          "templates": " 个模板",
+          "blocks": " 个块和部分",
+          "illustrations": " 个插图",
+          "animations": " 个自定义动画"
+        }
+      },
+      "proTeam": {
+        "name": "专业团队版",
+        "description": "适合团队和机构一起开发酷炫产品",
+        "priceNote": "终身访问。免费更新。无重复费用。",
+        "cta": "为您的团队获取全部访问权限",
+        "features": {
+          "all": "所有模板、组件和部分都可供您的整个团队使用"
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": {
+      "critical": {
+        "question": "为什么构建一个出色的落地页对您的业务至关重要？",
+        "answer": {
+          "p1": "在当今由 AI 驱动的世界中，脱颖而出比以往任何时候都更加困难。虽然任何人都可以构建产品，但专业的落地页是成功与失败之间的关键区别。",
+          "p2": "Launch UI 帮助您在不影响质量的情况下更快地发布。"
+        }
+      },
+      "noCode": {
+        "question": "为什么使用 Launch UI 而不是无代码工具？",
+        "answer": {
+          "p1": "无代码工具将您锁定在其生态系统中，需要重复费用且控制有限。它们通常存在性能问题，并且难以与您的产品集成。",
+          "p2": "您甚至无法更改托管提供商，而像网络分析这样的基本功能需要额外费用和付费插件。",
+          "p3": "今天看似方便的解决方案可能会让您明天陷入困境，限制您扩展和适应的能力。Launch UI 让您完全控制代码，同时保持专业质量。"
+        }
+      },
+      "different": {
+        "question": "Launch UI 与其他组件库和模板有何不同？",
+        "answer": {
+          "p1": "Launch UI 以优质的设计质量和令人愉悦的自定义动画和插图脱颖而出。",
+          "p2": "所有组件都经过精心设计，帮助将您的产品定位为专业工具，避免通用模板的外观。",
+          "p3": "与许多依赖过时 CSS 实践和旧依赖项的库不同，Launch UI 采用现代技术和最佳实践构建。"
+        }
+      },
+      "codeYours": {
+        "question": "\"代码是您的\"到底意味着什么？",
+        "answer": {
+          "p1": "Launch UI 的基本版本是开源的，永久免费，采用可随意使用的许可证。",
+          "p2": "包含更多组件和选项的专业版是一次性购买，可让您终身访问所有当前和未来的内容。可用于无限的个人和商业项目 - 无重复费用或限制。",
+          "p3": "有关许可和使用权的完整详细信息，请查看",
+          "pricingLink": "定价页面"
+        }
+      },
+      "figma": {
+        "question": "是否包含 Figma 文件？",
+        "answer": {
+          "p1": "是的！完整的 Launch UI 模板可在",
+          "figmaLink": "Figma 社区"
+        }
+      },
+      "discount": {
+        "question": "我可以获得折扣吗？",
+        "answer": {
+          "p1": "实际上，可以！我一直在积极寻找新功能的测试人员。如果您有兴趣通过反馈换取折扣，请通过",
+          "email": "电子邮件"
+        }
+      }
+    }
+  },
+  "cta": {
+    "title": "开始构建",
+    "buttons": {
+      "getStarted": "开始使用"
+    }
+  },
+  "footer": {
+    "name": "Launch UI",
+    "columns": {
+      "product": {
+        "title": "产品",
+        "links": {
+          "changelog": "更新日志",
+          "documentation": "文档"
+        }
+      },
+      "company": {
+        "title": "公司",
+        "links": {
+          "about": "关于",
+          "careers": "招聘",
+          "blog": "博客"
+        }
+      },
+      "contact": {
+        "title": "联系",
+        "links": {
+          "discord": "Discord",
+          "twitter": "Twitter"
+        }
+      }
+    },
+    "copyright": "© 2025 Mikołaj Dobrucki. 保留所有权利",
+    "policies": {
+      "privacy": "隐私政策",
+      "terms": "服务条款"
+    }
+  },
+  "navigation": {
+    "menuItems": {
+      "gettingStarted": "快速开始",
+      "components": "组件",
+      "documentation": "文档"
+    },
+    "logo": {
+      "title": "Launch UI",
+      "description": "使用 React、Shadcn/ui 和 Tailwind 构建的落地页模板，您可以直接复制/粘贴到您的项目中。"
+    },
+    "introItems": {
+      "introduction": {
+        "title": "介绍",
+        "description": "使用 Radix UI 和 Tailwind CSS 构建的可重用组件。"
+      },
+      "installation": {
+        "title": "安装",
+        "description": "如何安装依赖项并构建您的应用程序。"
+      },
+      "typography": {
+        "title": "排版",
+        "description": "标题、段落、列表等的样式"
+      }
+    },
+    "components": {
+      "alertDialog": {
+        "title": "警告对话框",
+        "description": "一个模态对话框，用重要内容中断用户并期望响应。"
+      },
+      "hoverCard": {
+        "title": "悬停卡片",
+        "description": "供有视力的用户预览链接后面的可用内容。"
+      },
+      "progress": {
+        "title": "进度条",
+        "description": "显示任务完成进度的指示器，通常显示为进度条。"
+      },
+      "scrollArea": {
+        "title": "滚动区域",
+        "description": "在视觉上或语义上分隔内容。"
+      },
+      "tabs": {
+        "title": "标签页",
+        "description": "一组分层的内容部分（称为标签面板），一次显示一个。"
+      },
+      "tooltip": {
+        "title": "工具提示",
+        "description": "当元素获得键盘焦点或鼠标悬停在其上时，显示与元素相关的信息的弹出窗口。"
+      }
+    }
+  }
+}

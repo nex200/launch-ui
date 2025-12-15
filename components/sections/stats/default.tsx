@@ -15,30 +15,7 @@ interface StatsProps {
 }
 
 export default function Stats({
-  items = [
-    {
-      label: "used by",
-      value: Math.round(siteConfig.stats.figma / 100) / 10,
-      suffix: "k",
-      description: "designers on Figma Community",
-    },
-    {
-      label: "over",
-      value: siteConfig.stats.github,
-      description: "clones and forks of the template on Github",
-    },
-    {
-      label: "already",
-      value: Math.round(siteConfig.stats.cli / 100) / 10,
-      suffix: "k",
-      description: "installations with shadcn/ui CLI",
-    },
-    {
-      label: "includes",
-      value: siteConfig.stats.sections,
-      description: "blocks and sections",
-    },
-  ],
+  items = [],
   className,
 }: StatsProps) {
   return (

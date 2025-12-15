@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import * as React from "react";
 import { ReactNode } from "react";
 
@@ -46,85 +47,92 @@ interface NavigationProps {
 }
 
 export default function Navigation({
-  menuItems = [
-    {
-      title: "Getting started",
-      content: "default",
-    },
-    {
-      title: "Components",
-      content: "components",
-    },
-    {
-      title: "Documentation",
-      isLink: true,
-      href: siteConfig.url,
-    },
-  ],
-  components = [
-    {
-      title: "Alert Dialog",
-      href: "/docs/primitives/alert-dialog",
-      description:
-        "A modal dialog that interrupts the user with important content and expects a response.",
-    },
-    {
-      title: "Hover Card",
-      href: "/docs/primitives/hover-card",
-      description:
-        "For sighted users to preview content available behind a link.",
-    },
-    {
-      title: "Progress",
-      href: "/docs/primitives/progress",
-      description:
-        "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-    },
-    {
-      title: "Scroll-area",
-      href: "/docs/primitives/scroll-area",
-      description: "Visually or semantically separates content.",
-    },
-    {
-      title: "Tabs",
-      href: "/docs/primitives/tabs",
-      description:
-        "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-    },
-    {
-      title: "Tooltip",
-      href: "/docs/primitives/tooltip",
-      description:
-        "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-    },
-  ],
+  menuItems,
+  components,
   logo = <LaunchUI />,
-  logoTitle = "Launch UI",
-  logoDescription = "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project.",
+  logoTitle,
+  logoDescription,
   logoHref = siteConfig.url,
-  introItems = [
-    {
-      title: "Introduction",
-      href: siteConfig.url,
-      description:
-        "Re-usable components built using Radix UI and Tailwind CSS.",
-    },
-    {
-      title: "Installation",
-      href: siteConfig.url,
-      description: "How to install dependencies and structure your app.",
-    },
-    {
-      title: "Typography",
-      href: siteConfig.url,
-      description: "Styles for headings, paragraphs, lists...etc",
-    },
-  ],
+  introItems,
 }: NavigationProps) {
+  const t = useTranslations("navigation");
+
+  const defaultMenuItems: MenuItem[] =
+    menuItems ?? [
+      {
+        title: t("menuItems.gettingStarted"),
+        content: "default",
+      },
+      {
+        title: t("menuItems.components"),
+        content: "components",
+      },
+      {
+        title: t("menuItems.documentation"),
+        isLink: true,
+        href: siteConfig.url,
+      },
+    ];
+
+  const defaultComponents: ComponentItem[] =
+    components ?? [
+      {
+        title: t("components.alertDialog.title"),
+        href: "/docs/primitives/alert-dialog",
+        description: t("components.alertDialog.description"),
+      },
+      {
+        title: t("components.hoverCard.title"),
+        href: "/docs/primitives/hover-card",
+        description: t("components.hoverCard.description"),
+      },
+      {
+        title: t("components.progress.title"),
+        href: "/docs/primitives/progress",
+        description: t("components.progress.description"),
+      },
+      {
+        title: t("components.scrollArea.title"),
+        href: "/docs/primitives/scroll-area",
+        description: t("components.scrollArea.description"),
+      },
+      {
+        title: t("components.tabs.title"),
+        href: "/docs/primitives/tabs",
+        description: t("components.tabs.description"),
+      },
+      {
+        title: t("components.tooltip.title"),
+        href: "/docs/primitives/tooltip",
+        description: t("components.tooltip.description"),
+      },
+    ];
+
+  const defaultLogoTitle = logoTitle ?? t("logo.title");
+  const defaultLogoDescription = logoDescription ?? t("logo.description");
+
+  const defaultIntroItems =
+    introItems ?? [
+      {
+        title: t("introItems.introduction.title"),
+        href: siteConfig.url,
+        description: t("introItems.introduction.description"),
+      },
+      {
+        title: t("introItems.installation.title"),
+        href: siteConfig.url,
+        description: t("introItems.installation.description"),
+      },
+      {
+        title: t("introItems.typography.title"),
+        href: siteConfig.url,
+        description: t("introItems.typography.description"),
+      },
+    ];
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
-        {menuItems.map((item, index) => (
+        {defaultMenuItems.map((item, index) => (
           <NavigationMenuItem key={index}>
             {item.isLink ? (
               <NavigationMenuLink
@@ -147,15 +155,15 @@ export default function Navigation({
                           >
                             {logo}
                             <div className="mt-4 mb-2 text-lg font-medium">
-                              {logoTitle}
+                              {defaultLogoTitle}
                             </div>
                             <p className="text-muted-foreground text-sm leading-tight">
-                              {logoDescription}
+                              {defaultLogoDescription}
                             </p>
                           </a>
                         </NavigationMenuLink>
                       </li>
-                      {introItems.map((intro, i) => (
+                      {defaultIntroItems.map((intro, i) => (
                         <ListItem key={i} href={intro.href} title={intro.title}>
                           {intro.description}
                         </ListItem>
@@ -163,7 +171,7 @@ export default function Navigation({
                     </ul>
                   ) : item.content === "components" ? (
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                      {components.map((component) => (
+                      {defaultComponents.map((component) => (
                         <ListItem
                           key={component.title}
                           title={component.title}

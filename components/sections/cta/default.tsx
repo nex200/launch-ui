@@ -1,4 +1,5 @@
 import { type VariantProps } from "class-variance-authority";
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 import { siteConfig } from "@/config/site";
@@ -23,25 +24,32 @@ interface CTAProps {
 }
 
 export default function CTA({
-  title = "Start building",
-  buttons = [
-    {
-      href: siteConfig.getStartedUrl,
-      text: "Get Started",
-      variant: "default",
-    },
-  ],
+  title,
+  buttons,
   className,
 }: CTAProps) {
+  const t = useTranslations("cta");
+
+  const defaultTitle = title ?? t("title");
+  const defaultButtons: CTAButtonProps[] | false =
+    buttons !== false
+      ? buttons ?? [
+          {
+            href: siteConfig.getStartedUrl,
+            text: t("buttons.getStarted"),
+            variant: "default" as const,
+          },
+        ]
+      : false;
   return (
     <Section className={cn("group relative overflow-hidden", className)}>
       <div className="max-w-container relative z-10 mx-auto flex flex-col items-center gap-6 text-center sm:gap-8">
         <h2 className="max-w-[640px] text-3xl leading-tight font-semibold sm:text-5xl sm:leading-tight">
-          {title}
+          {defaultTitle}
         </h2>
-        {buttons !== false && buttons.length > 0 && (
+        {defaultButtons !== false && defaultButtons.length > 0 && (
           <div className="flex justify-center gap-4">
-            {buttons.map((button, index) => (
+            {defaultButtons.map((button, index) => (
               <Button
                 key={index}
                 variant={button.variant || "default"}

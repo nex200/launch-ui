@@ -1,5 +1,6 @@
 import { type VariantProps } from "class-variance-authority";
 import { ArrowRightIcon } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
 import { siteConfig } from "@/config/site";
@@ -31,8 +32,8 @@ interface HeroProps {
 }
 
 export default function Hero({
-  title = "Give your big idea the design it deserves",
-  description = "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+  title,
+  description,
   mockup = (
     <Screenshot
       srcLight="/dashboard-light.png"
@@ -43,34 +44,38 @@ export default function Hero({
       className="w-full"
     />
   ),
-  badge = (
-    <Badge variant="outline" className="animate-appear">
-      <span className="text-muted-foreground">
-        New version of Launch UI is out!
-      </span>
-      <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
-        Get started
-        <ArrowRightIcon className="size-3" />
-      </a>
-    </Badge>
-  ),
-  buttons = [
-    {
-      href: siteConfig.getStartedUrl,
-      text: "Get Started",
-      variant: "default",
-    },
-    {
-      href: siteConfig.links.github,
-      text: "Github",
-      variant: "glow",
-      icon: <Github className="mr-2 size-4" />,
-    },
-  ],
+  badge,
+  buttons,
   className,
 }: HeroProps) {
+  const t = useTranslations("hero");
+
+  const defaultTitle = title ?? t("title");
+  const defaultDescription = description ?? t("description");
+  const defaultBadge =
+    badge !== false
+      ? badge ?? (
+          <Badge variant="outline" className="animate-appear">
+            <span className="text-muted-foreground">{t("badge.text")}</span>
+            <a href={siteConfig.getStartedUrl} className="flex items-center gap-1">
+              {t("badge.link")}
+              <ArrowRightIcon className="size-3" />
+            </a>
+          </Badge>
+        )
+      : false;
+  const defaultButtons: HeroButtonProps[] | false =
+    buttons !== false
+      ? buttons ?? [
+          {
+            href: siteConfig.url,
+            text: t("buttons.getStarted"),
+            variant: "default" as const,
+          },
+        ]
+      : false;
   return (
-    <Section
+    <section
       className={cn(
         "fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0",
         className,
@@ -78,16 +83,16 @@ export default function Hero({
     >
       <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
-          {badge !== false && badge}
           <h1 className="animate-appear from-foreground to-foreground dark:to-muted-foreground relative z-10 inline-block bg-linear-to-r bg-clip-text text-4xl leading-tight font-semibold text-balance text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
-            {title}
+            {defaultTitle}
           </h1>
           <p className="text-md animate-appear text-muted-foreground relative z-10 max-w-[740px] font-medium text-balance opacity-0 delay-100 sm:text-xl">
-            {description}
+            {defaultDescription}
           </p>
-          {buttons !== false && buttons.length > 0 && (
+          {defaultBadge !== false && defaultBadge}
+          {defaultButtons !== false && defaultButtons.length > 0 && (
             <div className="animate-appear relative z-10 flex justify-center gap-4 opacity-0 delay-300">
-              {buttons.map((button, index) => (
+              {defaultButtons.map((button, index) => (
                 <Button
                   key={index}
                   variant={button.variant || "default"}
@@ -124,6 +129,6 @@ export default function Hero({
           )}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

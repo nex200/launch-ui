@@ -1,0 +1,247 @@
+{
+  "navbar": {
+    "name": "AIShortV",
+    "links": {
+      "gettingStarted": "Getting Started",
+      "components": "Components",
+      "documentation": "Documentation"
+    },
+    "actions": {
+      "signIn": "Sign in",
+      "getStarted": "Get Started"
+    },
+    "toggleMenu": "Toggle navigation menu"
+  },
+  "hero": {
+    "title": "Give your big idea the design it deserves",
+    "description": "Professionally designed blocks and templates built with React, Shadcn/ui and Tailwind that will help your product stand out.",
+    "badge": {
+      "text": "New version of Launch UI is out!",
+      "link": "Get started"
+    },
+    "buttons": {
+      "getStarted": "Get Started"
+    }
+  },
+  "logos": {
+    "title": "Built with industry-standard tools and best practices"
+  },
+  "items": {
+    "title": "Everything you need. Nothing you don't.",
+    "items": {
+      "accessibility": {
+        "title": "Accessibility first",
+        "description": "Fully WCAG 2.0 compliant, made with best a11y practices"
+      },
+      "responsive": {
+        "title": "Responsive design",
+        "description": "Looks and works great on any device and screen size"
+      },
+      "themes": {
+        "title": "Light and dark mode",
+        "description": "Seamless switching between color schemes, 6 themes included"
+      },
+      "customizable": {
+        "title": "Easy to customize",
+        "description": "Flexible options to match your product or brand"
+      },
+      "performance": {
+        "title": "Top-level performance",
+        "description": "Made for lightning-fast load times and smooth interactions"
+      },
+      "production": {
+        "title": "Production ready",
+        "description": "Thoroughly tested and launch-prepared"
+      },
+      "localization": {
+        "title": "Made for localisation",
+        "description": "Easy to implement support for multiple languages and regions"
+      },
+      "cms": {
+        "title": "CMS friendly",
+        "description": "Built to work with your any headless content management system"
+      }
+    }
+  },
+  "stats": {
+    "items": []
+  },
+  "pricing": {
+    "title": "Build your dream landing page, today.",
+    "description": "Get lifetime access to all the components. No recurring fees. Just simple, transparent pricing.",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "For everyone starting out on a website for their big idea",
+        "priceNote": "Free and open-source forever.",
+        "cta": "Get started for free",
+        "features": {
+          "template": "1 website template",
+          "blocks": "9 blocks and sections",
+          "animations": "4 custom animations"
+        }
+      },
+      "pro": {
+        "name": "Pro",
+        "description": "For early-stage founders, solopreneurs and indie devs",
+        "priceNote": "Lifetime access. Free updates. No recurring fees.",
+        "cta": "Get all-access",
+        "features": {
+          "templates": " templates",
+          "blocks": " blocks and sections",
+          "illustrations": " illustrations",
+          "animations": " custom animations"
+        }
+      },
+      "proTeam": {
+        "name": "Pro Team",
+        "description": "For teams and agencies working on cool products together",
+        "priceNote": "Lifetime access. Free updates. No recurring fees.",
+        "cta": "Get all-access for your team",
+        "features": {
+          "all": "All the templates, components and sections available for your entire team"
+        }
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions and Answers",
+    "items": {
+      "critical": {
+        "question": "Why building a great landing page is critical for your business?",
+        "answer": {
+          "p1": "In today's AI-driven world, standing out is harder than ever. While anyone can build a product, a professional landing page makes the difference between success and failure.",
+          "p2": "Launch UI helps you ship faster without compromising on quality."
+        }
+      },
+      "noCode": {
+        "question": "Why use Launch UI instead of a no-code tool?",
+        "answer": {
+          "p1": "No-code tools lock you into their ecosystem with recurring fees and limited control. They often come with performance issues and make it difficult to integrate with your product.",
+          "p2": "You can't even change your hosting provider and basic things like web analytics come as extra costs and paid add-ons.",
+          "p3": "What might seem like a convenient solution today could paint you into a corner tomorrow, limiting your ability to scale and adapt. Launch UI gives you full control of your code while maintaining professional quality."
+        }
+      },
+      "different": {
+        "question": "How Launch UI is different from other components libraries and templates?",
+        "answer": {
+          "p1": "Launch UI stands out with premium design quality and delightful touches of custom animations and illustrations.",
+          "p2": "All components are carefully crafted to help position your product as a professional tool, avoiding the generic template look.",
+          "p3": "Unlike many libraries that rely on outdated CSS practices and old dependencies, Launch UI is built with modern technologies and best practices in mind."
+        }
+      },
+      "codeYours": {
+        "question": "Why exactly does it mean that \"The code is yours\"?",
+        "answer": {
+          "p1": "The basic version of Launch UI is open-source and free forever, under a do-whatever-you-want license.",
+          "p2": "The pro version that contains more components and options is a one-time purchase that gives you lifetime access to all current and future content. Use it for unlimited personal and commercial projects - no recurring fees or restrictions.",
+          "p3": "For complete details about licensing and usage rights, check out",
+          "pricingLink": "the pricing page"
+        }
+      },
+      "figma": {
+        "question": "Are Figma files included?",
+        "answer": {
+          "p1": "Yes! The complete Launch UI template is available for free on the",
+          "figmaLink": "Figma community"
+        }
+      },
+      "discount": {
+        "question": "Can I get a discount?",
+        "answer": {
+          "p1": "Actually, yes! I'm always acively looking for beta testers of new features. If you are interested in exchanging feedback for a discount, please contact me via",
+          "email": "email"
+        }
+      }
+    }
+  },
+  "cta": {
+    "title": "Start building",
+    "buttons": {
+      "getStarted": "Get Started"
+    }
+  },
+  "footer": {
+    "name": "Launch UI",
+    "columns": {
+      "product": {
+        "title": "Product",
+        "links": {
+          "changelog": "Changelog",
+          "documentation": "Documentation"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "about": "About",
+          "careers": "Careers",
+          "blog": "Blog"
+        }
+      },
+      "contact": {
+        "title": "Contact",
+        "links": {
+          "discord": "Discord",
+          "twitter": "Twitter"
+        }
+      }
+    },
+    "copyright": "© 2025 Mikołaj Dobrucki. All rights reserved",
+    "policies": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "navigation": {
+    "menuItems": {
+      "gettingStarted": "Getting started",
+      "components": "Components",
+      "documentation": "Documentation"
+    },
+    "logo": {
+      "title": "Launch UI",
+      "description": "Landing page template built with React, Shadcn/ui and Tailwind that you can copy/paste into your project."
+    },
+    "introItems": {
+      "introduction": {
+        "title": "Introduction",
+        "description": "Re-usable components built using Radix UI and Tailwind CSS."
+      },
+      "installation": {
+        "title": "Installation",
+        "description": "How to install dependencies and structure your app."
+      },
+      "typography": {
+        "title": "Typography",
+        "description": "Styles for headings, paragraphs, lists...etc"
+      }
+    },
+    "components": {
+      "alertDialog": {
+        "title": "Alert Dialog",
+        "description": "A modal dialog that interrupts the user with important content and expects a response."
+      },
+      "hoverCard": {
+        "title": "Hover Card",
+        "description": "For sighted users to preview content available behind a link."
+      },
+      "progress": {
+        "title": "Progress",
+        "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar."
+      },
+      "scrollArea": {
+        "title": "Scroll-area",
+        "description": "Visually or semantically separates content."
+      },
+      "tabs": {
+        "title": "Tabs",
+        "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time."
+      },
+      "tooltip": {
+        "title": "Tooltip",
+        "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it."
+      }
+    }
+  }
+}
